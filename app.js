@@ -1,0 +1,11 @@
+const express = require('express');
+const app = express();
+const PORT = 3000;
+const router = require('./routes/api');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(router);
+app.listen(PORT, () => console.log(`Server Running on PORT: ${PORT}`));
