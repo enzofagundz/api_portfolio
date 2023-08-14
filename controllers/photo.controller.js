@@ -1,5 +1,5 @@
 const { Prisma } = require('@prisma/client');
-const PrismaClass = require('../database/prisma/prisma.class');
+const PrismaClass = require('../prisma/prisma.class');
 const p = PrismaClass.getPrisma();
 
 class PhotoController {
